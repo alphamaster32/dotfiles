@@ -1,5 +1,8 @@
 " vi improved
 set nocompatible
+"set syntax
+syntax on
+"other stuff
 set termguicolors
 set number
 set ts=4 sw=4 expandtab
@@ -10,6 +13,12 @@ set complete-=i
 set smarttab
 set laststatus=2
 set wildmenu
+" dont wrap long lines
+set nowrap
+" show substitutions incrementally another cool neovim feature
+if has("nvim")
+  set inccommand=nosplit
+endif
 filetype plugin indent on
 " plugins
 call plug#begin('~/.vim/plugged')
@@ -19,11 +28,12 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'Yggdroot/indentLine', {'for':'yaml'}
 Plug 'neoclide/coc.nvim', {'branch': 'release', 'for': ['javascript', 'vue']}
+Plug 'editorconfig/editorconfig-vim'
 Plug 'fatih/vim-go', {'for': 'go'}
 Plug 'preservim/nerdtree'
 call plug#end()
-" set theme settings
-colorscheme gruvbox
+" set theme settings and fail if it doesnt exsit
+try | colorscheme gruvbox | catch | endtry
 let g:airline_theme='gruvbox'
 let g:airline_powerline_fonts = 1
 " Allow color schemes to do bright colors without forcing bold.
@@ -45,4 +55,3 @@ let g:indentLine_char = '⦙'
 nnoremap <C-g> :NERDTreeToggle<CR>
 " remaps
 nnoremap <C-L> :nohl<CR><C-L>
-
