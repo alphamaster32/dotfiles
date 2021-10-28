@@ -8,6 +8,7 @@
 alias ls='ls --color=auto'
 alias ll='ls --color=auto -lht'
 alias la='ls --color=auto -laht'
+alias grep='grep --color'
 alias gf='git checkout $(git rev-list --topo-order HEAD..master | tail -1 | head -1)'
 alias gb='git checkout HEAD~'
 alias gl='git checkout $(git log --branches -1 --pretty=format:"%H")'
@@ -20,4 +21,3 @@ PS1='[\u@\h \W]\$ '
 export EDITOR='nvim'
 export GOBIN='/home/hossein/go/bin'
 export MANPAGER="/bin/sh -c \"col -b | nvim -c 'set ft=man ts=8 nomod nolist nonu noma' -\""
-export PAGER="nvim" 
