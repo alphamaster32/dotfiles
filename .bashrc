@@ -19,5 +19,5 @@ alias lc='find . -name '*.go' | xargs wc -l | sort -nr'
 PS1='[\u@\h \W]\$ '
 
 export EDITOR='nvim'
-export GOBIN='/home/hossein/go/bin'
+export PATH="$PATH:$HOME/go/bin"
 export MANPAGER="/bin/sh -c \"col -b | nvim -c 'set ft=man ts=8 nomod nolist nonu noma' -\""

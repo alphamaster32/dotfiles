@@ -26,6 +26,14 @@ set ttyfast
 set signcolumn=number
 "dont wrap long lines
 set nowrap
+"enable mouse
+if has('mouse')
+  if &term =~ 'xterm'
+    set mouse=a
+  else
+    set mouse=nvi
+  endif
+endif
 filetype plugin indent on
 "plugins
 call plug#begin('~/.vim/plugged')
