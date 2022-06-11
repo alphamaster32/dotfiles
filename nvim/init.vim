@@ -45,8 +45,6 @@ Plug 'chriskempson/base16-vim'
 Plug 'itchyny/lightline.vim'
 "to show indents in yaml files
 Plug 'Yggdroot/indentLine', {'for':'yaml'}
-"respect editorconfig in vim
-Plug 'editorconfig/editorconfig-vim'
 "best go vim plugin
 Plug 'fatih/vim-go', {'for': 'go'}
 "syntax and tag support for rust
@@ -68,6 +66,8 @@ let g:ctrlp_custom_ignore = 'node_modules\|target\|git'
 "add yaml stuff
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 let g:indentLine_char = '⦙'
+"add vim-go stuff
+let g:go_doc_keywordprg_enabled = 1
 "tagbar mapping
 nnoremap <C-g> :TagbarToggle<CR>
 "remaps
