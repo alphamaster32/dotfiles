@@ -34,6 +34,15 @@ if has('mouse')
     set mouse=nvi
   endif
 endif
+
+if !has('nvim')
+    set ttimeout
+    set ttimeoutlen=1
+    let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+    let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+    let &t_SR = "\<Esc>]50;CursorShape=2\x7"
+endif
+
 filetype plugin indent on
 "plugins
 call plug#begin('~/.vim/plugged')
@@ -53,6 +62,8 @@ Plug 'rust-lang/rust.vim', {'for': 'rust'}
 Plug 'preservim/nerdtree'
 "tagbar plugin to pretty print tags
 Plug 'preservim/tagbar'
+"show substitute changes on the go for vim
+Plug 'markonm/traces.vim'
 call plug#end()
 "set theme settings and fail if it doesnt exsit
 let base16colorspace=256

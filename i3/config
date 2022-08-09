@@ -210,8 +210,8 @@ workspace $ws8 output eDP1
 workspace $ws9 output eDP1
 workspace $ws10 output eDP1
 
-# gaps outer 5
-exec_always --no-startup-id feh --bg-scale Downloads/wallpaper.jpg
+gaps outer 4
+exec_always --no-startup-id feh --bg-scale Pictures/afternoon.png
 exec_always --no-startup-id picom -b --config ~/.config/picom/picom.conf
 exec_always --no-startup-id optimus-manager-qt
 #exec_always --no-startup-id $HOME/.config/polybar/launch.sh
