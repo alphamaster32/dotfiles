@@ -18,6 +18,6 @@ alias gdb='gdb -iex "set auto-load no"'
 alias lc='find . -name '*.go' | xargs wc -l | sort -nr'
 PS1='[\u@\h \W]\$ '
 
-export EDITOR='vim'
+export EDITOR='nvim'
 export PATH="$PATH:$HOME/go/bin"
-export MANPAGER="/bin/sh -c \"col -b | vim -c 'set ft=man ts=8 nomod nolist nonu noma' -\""
+export MANPAGER="/bin/sh -c \"col -b | nvim -c 'set ft=man ts=8 nomod nolist nonu noma' -\""

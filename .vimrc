@@ -18,7 +18,6 @@ set laststatus=2
 set wildmenu
 set title
 set encoding=utf-8
-set lazyredraw
 set colorcolumn=80
 set ttyfast
 "this will be set when we need a sign column for lsp and it replaces a number
@@ -58,12 +57,6 @@ Plug 'Yggdroot/indentLine', {'for':'yaml'}
 Plug 'fatih/vim-go', {'for': 'go'}
 "syntax and tag support for rust
 Plug 'rust-lang/rust.vim', {'for': 'rust'}
-"plugin for showing the source tree
-Plug 'preservim/nerdtree'
-"tagbar plugin to pretty print tags
-Plug 'preservim/tagbar'
-"show substitute changes on the go for vim
-Plug 'markonm/traces.vim'
 call plug#end()
 "set theme settings and fail if it doesnt exsit
 let base16colorspace=256

@@ -49,10 +49,6 @@ Plug 'Yggdroot/indentLine', {'for':'yaml'}
 Plug 'fatih/vim-go', {'for': 'go'}
 "syntax and tag support for rust
 Plug 'rust-lang/rust.vim', {'for': 'rust'}
-"plugin for showing the source tree
-Plug 'preservim/nerdtree'
-"tagbar plugin to pretty print tags
-Plug 'preservim/tagbar'
 call plug#end()
 "set theme settings and fail if it doesnt exsit
 let base16colorspace=256
@@ -68,8 +64,6 @@ autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 let g:indentLine_char = '⦙'
 "add vim-go stuff
 let g:go_doc_keywordprg_enabled = 1
-"tagbar mapping
-nnoremap <C-g> :TagbarToggle<CR>
 "remaps
 nnoremap <C-L> :nohl<CR><C-L>
 tnoremap <ESC> <C-\><C-n>
