@@ -199,19 +199,24 @@ mouse_warping none
 for_window [class="^.*"] border pixel 1
 hide_edge_borders smart
 
-workspace $ws1 output HDMI1
-workspace $ws2 output HDMI1
-workspace $ws3 output HDMI1
-workspace $ws4 output HDMI1
-workspace $ws5 output HDMI1
-workspace $ws6 output eDP1
-workspace $ws7 output eDP1
-workspace $ws8 output eDP1
-workspace $ws9 output eDP1
-workspace $ws10 output eDP1
+#workspace $ws1 output HDMI1
+#workspace $ws2 output HDMI1
+#workspace $ws3 output HDMI1
+#workspace $ws4 output HDMI1
+#workspace $ws5 output HDMI1
+workspace $ws1 output DP1
+workspace $ws2 output DP1
+workspace $ws3 output DP1
+workspace $ws4 output DP1
+workspace $ws5 output DP1
+#workspace $ws6 output eDP1
+#workspace $ws7 output eDP1
+#workspace $ws8 output eDP1
+#workspace $ws9 output eDP1
+#workspace $ws10 output eDP1
 
 gaps outer 4
-exec_always --no-startup-id feh --bg-scale Pictures/afternoon.png
+exec_always --no-startup-id feh --bg-scale Pictures/river.png
 exec_always --no-startup-id picom -b --config ~/.config/picom/picom.conf
 exec_always --no-startup-id optimus-manager-qt
 #exec_always --no-startup-id $HOME/.config/polybar/launch.sh

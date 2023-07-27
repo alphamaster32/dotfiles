@@ -15,9 +15,11 @@ alias gl='git checkout $(git log --branches -1 --pretty=format:"%H")'
 alias gg='git checkout `git rev-list --max-parents=0 HEAD | tail -n 1`'
 alias ardtty='stty -F /dev/ttyACM0 cs8 115200 ignbrk -brkint -imaxbel -opost -onlcr -isig -icanon -iexten -echo -echoe -echok -echoctl -echoke noflsh -ixon -crtscts'
 alias gdb='gdb -iex "set auto-load no"'
-alias lc='find . -name '*.go' | xargs wc -l | sort -nr'
+alias lc='find . -name '*.rs' | xargs wc -l | sort -nr'
 PS1='[\u@\h \W]\$ '
 
 export EDITOR='nvim'
-export PATH="$PATH:$HOME/go/bin"
-export MANPAGER="/bin/sh -c \"col -b | nvim -c 'set ft=man ts=8 nomod nolist nonu noma' -\""
+export PATH="$PATH:$HOME/go/bin:$HOME/.cargo/bin"
+# export MANPAGER="/bin/sh -c \"col -b | nvim -c 'set ft=man ts=8 nomod nolist nonu noma' -\""
+export MANPAGER="nvim +Man!"
+# export MANPAGER='vim -M +MANPAGER "+set nonumber" -'

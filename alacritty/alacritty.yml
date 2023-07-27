@@ -9,7 +9,7 @@ window:
 # Font configuration (changes require restart)
 font:
   # The size to use.
-   size: 12
+   size: 9
    normal:
     family: Fira Code
     # Style can be specified to pick a specific face.
