@@ -49,6 +49,8 @@ Plug 'Yggdroot/indentLine', {'for':'yaml'}
 Plug 'fatih/vim-go', {'for': 'go'}
 "syntax and tag support for rust
 Plug 'rust-lang/rust.vim', {'for': 'rust'}
+"editor config for javascript nonsense
+Plug 'editorconfig/editorconfig-vim'
 call plug#end()
 "set theme settings and fail if it doesnt exsit
 let base16colorspace=256
