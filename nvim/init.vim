@@ -20,6 +20,7 @@ set title
 set encoding=utf-8
 set lazyredraw
 set colorcolumn=80
+set noshowmode
 set ttyfast
 "this will be set when we need a sign column for lsp and it replaces a number
 "instead of adding a column
@@ -49,12 +50,13 @@ Plug 'Yggdroot/indentLine', {'for':'yaml'}
 Plug 'fatih/vim-go', {'for': 'go'}
 "syntax and tag support for rust
 Plug 'rust-lang/rust.vim', {'for': 'rust'}
+"Assembly
+Plug 'Shirk/vim-gas'
 "editor config for javascript nonsense
 Plug 'editorconfig/editorconfig-vim'
 call plug#end()
 "set theme settings and fail if it doesnt exsit
-let base16colorspace=256
-try | colorscheme base16-gruvbox-dark-hard | catch | endtry
+try | colorscheme base16-gruvbox-dark-hard| catch | endtry
 "Allow color schemes to do bright colors without forcing bold.
 if &t_Co == 8 && $TERM !~# '^Eterm'
   set t_Co=16

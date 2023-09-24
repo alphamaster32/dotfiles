@@ -183,11 +183,12 @@ bindsym Print exec scrot "$HOME/Pictures/screenshots/screenshot_%Y-%m-%d_%H.%M.%
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-        position top
-        status_command i3status
-        font pango:Fira Code Retina 10
-}
+#bar {
+        #position top
+        #status_command i3status
+        #font pango:Fira Code Retina 10
+#}
+
 focus_follows_mouse no
 
 new_window 1pixel
@@ -219,4 +220,4 @@ gaps outer 4
 exec_always --no-startup-id feh --bg-scale Pictures/river.png
 exec_always --no-startup-id picom -b --config ~/.config/picom/picom.conf
 exec_always --no-startup-id optimus-manager-qt
-#exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh

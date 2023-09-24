@@ -19,7 +19,6 @@ set wildmenu
 set title
 set encoding=utf-8
 set colorcolumn=80
-set ttyfast
 "this will be set when we need a sign column for lsp and it replaces a number
 "instead of adding a column
 set signcolumn=number
