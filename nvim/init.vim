@@ -50,6 +50,7 @@ Plug 'Yggdroot/indentLine', {'for':'yaml'}
 Plug 'fatih/vim-go', {'for': 'go'}
 "syntax and tag support for rust
 Plug 'rust-lang/rust.vim', {'for': 'rust'}
+Plug 'lervag/vimtex', {'for': 'tex'}
 "Assembly
 Plug 'Shirk/vim-gas'
 "editor config for javascript nonsense
@@ -71,3 +72,4 @@ let g:go_doc_keywordprg_enabled = 1
 "remaps
 nnoremap <C-L> :nohl<CR><C-L>
 tnoremap <ESC> <C-\><C-n>
+nnoremap <C-J> :RustFmt<CR>
