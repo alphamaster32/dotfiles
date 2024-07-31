@@ -23,3 +23,4 @@ export PATH="$PATH:$HOME/go/bin:$HOME/.cargo/bin"
 # export MANPAGER="/bin/sh -c \"col -b | nvim -c 'set ft=man ts=8 nomod nolist nonu noma' -\""
 export MANPAGER="nvim +Man!"
 # export MANPAGER='vim -M +MANPAGER "+set nonumber" -'
+# export PS1="\W \$ "

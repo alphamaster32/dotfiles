@@ -22,6 +22,8 @@ set lazyredraw
 set colorcolumn=80
 set noshowmode
 set ttyfast
+" respect the modeline
+set modeline
 "this will be set when we need a sign column for lsp and it replaces a number
 "instead of adding a column
 set signcolumn=number
@@ -51,10 +53,8 @@ Plug 'fatih/vim-go', {'for': 'go'}
 "syntax and tag support for rust
 Plug 'rust-lang/rust.vim', {'for': 'rust'}
 Plug 'lervag/vimtex', {'for': 'tex'}
-"Assembly
-Plug 'Shirk/vim-gas'
 "editor config for javascript nonsense
-Plug 'editorconfig/editorconfig-vim'
+"Plug 'editorconfig/editorconfig-vim'
 call plug#end()
 "set theme settings and fail if it doesnt exsit
 try | colorscheme base16-gruvbox-dark-hard| catch | endtry
@@ -63,7 +63,7 @@ if &t_Co == 8 && $TERM !~# '^Eterm'
   set t_Co=16
 endif
 "set ctrlp igonred paths
-let g:ctrlp_custom_ignore = 'node_modules\|target\|git'
+let g:ctrlp_custom_ignore = 'node_modules\|target\|git\|build'
 "add yaml stuff
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 let g:indentLine_char = '⦙'
