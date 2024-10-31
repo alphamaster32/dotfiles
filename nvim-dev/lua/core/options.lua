@@ -1,0 +1,26 @@
+vim.wo.number = true
+vim.opt.sw = 4
+vim.opt.tw = 4
+vim.opt.expandtab = true
+vim.opt.incsearch = true
+vim.opt.smartcase = true
+vim.opt.autoindent = true
+vim.opt.backspace = 'indent,eol,start'
+vim.opt.smarttab = true
+vim.opt.laststatus = 2
+vim.opt.wildmenu = true
+vim.opt.title = true
+vim.opt.encoding = 'utf-8'
+vim.opt.lazyredraw = true
+vim.opt.colorcolumn = '80'
+vim.opt.showmode = false
+vim.opt.ttyfast = true
+vim.opt.fillchars = {
+  fold = ' ', -- remove folding chars
+  vert = ' ', -- set vsplit chars
+}
+vim.opt.modeline = true
+vim.opt.signcolumn = 'number'
+vim.opt.wrap = false
+vim.opt.mouse = 'a'
+vim.opt.termguicolors = true

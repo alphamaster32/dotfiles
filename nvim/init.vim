@@ -22,6 +22,7 @@ set lazyredraw
 set colorcolumn=80
 set noshowmode
 set ttyfast
+set fillchars=vert:\ 
 " respect the modeline
 set modeline
 "this will be set when we need a sign column for lsp and it replaces a number
