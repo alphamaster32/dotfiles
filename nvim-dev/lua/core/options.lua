@@ -27,3 +27,9 @@ vim.opt.fillchars = {
   fold = ' ', -- remove folding chars
   vert = ' ', -- set vsplit chars
 }
+
+-- half space for persian
+vim.api.nvim_set_hl(0, "Conceal", { link = "Normal" })
+vim.fn.matchadd("Conceal", "\\%u200c", 10, -1, { conceal = "|" })
+vim.opt.conceallevel = 2
+vim.opt.concealcursor = "nv"

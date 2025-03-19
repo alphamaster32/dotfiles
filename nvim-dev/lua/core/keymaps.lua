@@ -11,3 +11,8 @@ vim.api.nvim_create_autocmd("FileType", {
 vim.keymap.set('n', '<C-k>', function()
     vim.diagnostic.enable(not vim.diagnostic.is_enabled())
 end)
+
+vim.api.nvim_set_keymap("i", "<leader>f", "<C-o>:set keymap=persian<CR>",
+    { noremap = true, silent = true })
+vim.api.nvim_set_keymap("i", "<leader>e", "<C-o>:set keymap=<CR>",
+    { noremap = true, silent = true })
