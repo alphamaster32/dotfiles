@@ -20,6 +20,7 @@ vim.o.modeline = true
 vim.o.signcolumn = 'number'
 vim.o.wrap = false
 vim.o.mouse = 'a'
+vim.opt.timeoutlen = 300
 
 vim.opt.termguicolors = true
 vim.opt.undofile = true
