@@ -20,7 +20,6 @@ return { -- Highlight, edit, and navigate code
             'make',
             'cmake',
             'markdown',
-            'markdown_inline',
             'bash',
             'rust',
             'c',

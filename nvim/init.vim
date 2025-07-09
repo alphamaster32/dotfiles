@@ -38,6 +38,10 @@ if has('mouse')
     set mouse=nvi
   endif
 endif
+"enable the undo history
+set undofile
+set undolevels=1000
+set undoreload=10000
 filetype plugin indent on
 "plugins
 call plug#begin('~/.vim/plugged')
@@ -74,3 +78,15 @@ let g:go_doc_keywordprg_enabled = 1
 nnoremap <C-L> :nohl<CR><C-L>
 tnoremap <ESC> <C-\><C-n>
 nnoremap <C-J> :RustFmt<CR>
+
+command! Persian call TogglePersianKeymap()
+
+function! TogglePersianKeymap()
+  if &keymap ==# 'persian'
+    set keymap=
+    echo "Keymap reset to default"
+  else
+    set keymap=persian
+    echo "Keymap set to Persian"
+  endif
+endfunction

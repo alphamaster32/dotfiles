@@ -14,13 +14,13 @@ alias gb='git checkout HEAD~'
 alias gl='git checkout $(git log --branches -1 --pretty=format:"%H")'
 alias gg='git checkout `git rev-list --max-parents=0 HEAD | tail -n 1`'
 alias gdb='gdb -iex "set auto-load no"'
-alias lc='find . -name '*.rs' | xargs wc -l | sort -nr'
+alias lc='find . -name "*.rs" | xargs wc -l | sort -nr'
 alias dvim='NVIM_APPNAME=nvim-dev nvim'
 PS1='[\u@\h \W]\$ '
-
-HISTSIZE=10000
-HISTFILESIZE=10000
-
-EDITOR='nvim'
+HISTSIZE=100000
+HISTFILESIZE=100000
+export TERMINAL='/usr/bin/alacritty -e'
+export EDITOR='nvim'
 PATH="$PATH:$HOME/.cargo/bin"
-MANPAGER="nvim +Man!"
+export MANPAGER='nvim +Man!'
+export PAGER='nvim +Man!'

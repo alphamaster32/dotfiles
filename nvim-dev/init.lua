@@ -27,4 +27,5 @@ require('lazy').setup({
     require 'plugins.lsp',
     require 'plugins.todo',
     require 'plugins.markdown',
+    require 'plugins.clang-format',
 })

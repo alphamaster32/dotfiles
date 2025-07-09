@@ -3,8 +3,8 @@ return {
     'neovim/nvim-lspconfig',
     dependencies = {
         -- Automatically install LSPs and related tools to stdpath for Neovim
-        { 'williamboman/mason.nvim', config = true }, -- NOTE: Must be loaded before dependants
-        'williamboman/mason-lspconfig.nvim',
+        { 'mason-org/mason.nvim', config = true }, -- NOTE: Must be loaded before dependants
+        'mason-org/mason-lspconfig.nvim',
         'WhoIsSethDaniel/mason-tool-installer.nvim',
 
         -- Useful status updates for LSP.
@@ -153,6 +153,9 @@ return {
         --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
         local servers = {
             clangd = {
+                keys = {
+                    { "<leader>ch", "<cmd>ClangdSwitchSourceHeader<cr>", desc = "Switch Source/Header (C/C++)" },
+                },
                 root_dir = function(fname)
                     return require("lspconfig.util").root_pattern(
                         "Makefile",
@@ -171,6 +174,7 @@ return {
                 },
                 cmd = {
                     "clangd",
+                    "--compile-commands-dir=.",
                     "--background-index",
                     "--clang-tidy",
                     "--header-insertion=iwyu",
@@ -187,7 +191,7 @@ return {
             gopls = {},
             rust_analyzer = {},
             zls = {},
-            verible = {},
+            -- verible = {},
             lua_ls = {
                 -- cmd = {...},
                 -- filetypes = { ...},
@@ -197,15 +201,18 @@ return {
                         completion = {
                             callSnippet = 'Replace',
                         },
-                        runtime = { version = 'LuaJIT' },
+                        runtime = {
+                            version = 'LuaJIT',
+                            path = vim.split(package.path, ';'),
+                        },
                         workspace = {
                             checkThirdParty = false,
-                            library = {
-                                '${3rd}/luv/library',
-                                unpack(vim.api.nvim_get_runtime_file('', true)),
-                            },
+                            library = { vim.env.VIMRUNTIME },
                         },
-                        diagnostics = { disable = { 'missing-fields' } },
+                        diagnostics = {
+                            disable = { 'missing-fields' },
+                            globals = {'vim'},
+                        },
                         format = {
                             enable = false,
                         },
