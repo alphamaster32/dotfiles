@@ -42,7 +42,8 @@ return {
             tabline = {},
             winbar = {},
             inactive_winbar = {},
-            extensions = {}
+            extensions = {'mason', 'lazy', 'toggleterm'},
+            globalstatus = true,
         }
     end
 }

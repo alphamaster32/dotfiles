@@ -25,7 +25,8 @@ require('lazy').setup({
     require 'plugins.treesitter',
     require 'plugins.telescope',
     require 'plugins.lsp',
+    require 'plugins.ferris',
     require 'plugins.todo',
     require 'plugins.markdown',
-    require 'plugins.clang-format',
+    require 'plugins.toggleterm',
 })

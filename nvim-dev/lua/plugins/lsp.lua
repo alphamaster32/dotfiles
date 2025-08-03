@@ -189,7 +189,18 @@ return {
                 },
             },
             gopls = {},
-            rust_analyzer = {},
+            rust_analyzer = {
+                settings = {
+                    ["rust-analyzer"] = {
+                        -- checkOnSave = {
+                            -- command = "clippy",
+                        -- },
+                        inlayHints = {
+                            enable = true,
+                        },
+                    },
+                },
+            },
             zls = {},
             -- verible = {},
             lua_ls = {
@@ -234,6 +245,10 @@ return {
         local ensure_installed = vim.tbl_keys(servers or {})
         vim.list_extend(ensure_installed, {
             'stylua', -- Used to format Lua code
+            'rust_analyzer',
+            'lua_ls',
+            'zls',
+            'clangd'
         })
         require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
