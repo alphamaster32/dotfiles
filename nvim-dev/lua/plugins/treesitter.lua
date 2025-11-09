@@ -26,6 +26,7 @@ return { -- Highlight, edit, and navigate code
             'verilog',
             'latex',
             'bibtex',
+            'zig',
         },
         -- Autoinstall languages that are not installed
         auto_install = true,

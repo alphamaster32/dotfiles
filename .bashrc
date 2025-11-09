@@ -21,6 +21,6 @@ HISTSIZE=100000
 HISTFILESIZE=100000
 export TERMINAL='/usr/bin/alacritty -e'
 export EDITOR='nvim'
-PATH="$PATH:$HOME/.cargo/bin"
+export PATH="$HOME/.cargo/bin:$HOME/.local/share/../bin:$PATH"
 export MANPAGER='nvim +Man!'
 export PAGER='nvim +Man!'

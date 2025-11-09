@@ -29,4 +29,5 @@ require('lazy').setup({
     require 'plugins.todo',
     require 'plugins.markdown',
     require 'plugins.toggleterm',
+    require 'plugins.zig',
 })

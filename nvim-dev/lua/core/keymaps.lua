@@ -22,4 +22,3 @@ vim.api.nvim_create_user_command("Persian", function()
     print("Keymap set to Persian")
   end
 end, {})
-

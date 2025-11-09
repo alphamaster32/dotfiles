@@ -20,21 +20,10 @@ vim.o.modeline = true
 vim.o.signcolumn = 'number'
 vim.o.wrap = false
 vim.o.mouse = 'a'
-vim.opt.timeoutlen = 300
+vim.o.timeoutlen = 300
+vim.o.fillchars= "vert: "
 
-vim.o.termbidi = true
-
-vim.opt.termguicolors = true
-vim.opt.undofile = true
-vim.opt.fillchars = {
-  fold = ' ', -- remove folding chars
-  vert = ' ', -- set vsplit chars
-}
-
--- half space for persian
-vim.api.nvim_set_hl(0, "Conceal", { link = "Normal" })
-vim.fn.matchadd("Conceal", "\\%u200c", 10, -1, { conceal = "|" })
-vim.opt.conceallevel = 2
-vim.opt.concealcursor = "nv"
+vim.o.termguicolors = true
+vim.o.undofile = true
 
 vim.diagnostic.config({ virtual_text = true })
